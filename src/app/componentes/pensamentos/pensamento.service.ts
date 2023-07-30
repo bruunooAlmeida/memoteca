@@ -12,7 +12,7 @@ export class PensamentoService {
 
   constructor(private http: HttpClient) { }
 
-  listar(pagina: number): Observable<Pensamento[]> {
+  listar(pagina: number, filtro: string): Observable<Pensamento[]> {
     const itensPorPagina: number = 6;
 
     let params = new HttpParams()
@@ -21,6 +21,10 @@ export class PensamentoService {
     /* Passando Parametros por Concatenação na URL
       return this.http.get<Pensamento[]>(`${this.API}?_page=${pagina}&_limit${itensPorPagina}`);
     */
+    if(filtro.trim().length > 2){
+      params = params.set("q",filtro);
+    }
+
     return this.http.get<Pensamento[]>(this.API,{params : params});
   }
 
