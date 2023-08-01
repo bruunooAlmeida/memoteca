@@ -17,6 +17,7 @@ export class EditarPensamentoComponent implements OnInit {
     conteudo: '',
     autoria: '',
     modelo: '',
+    favorito: false
   };
 
   constructor(
@@ -43,6 +44,7 @@ export class EditarPensamentoComponent implements OnInit {
           Validators.compose([Validators.required, Validators.minLength(3)]),
         ],
         modelo: [pensamento.modelo],
+        favorito: [pensamento.favorito],
       });
     });
   }

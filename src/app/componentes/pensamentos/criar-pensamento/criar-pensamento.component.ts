@@ -33,6 +33,7 @@ export class CriarPensamentoComponent implements OnInit {
         Validators.minLength(3)
        ])],
        modelo: ['modelo1'],
+       favorito: false
      });
   }
 
