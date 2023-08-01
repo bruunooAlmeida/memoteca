@@ -11,6 +11,7 @@
   margin-right: 5px;
   margin-top: 15px;
 }
+
 .pensamento {
   background-color: #F8F9FE;
   padding: 1rem;
@@ -51,6 +52,7 @@
     width: 100%;
   }
 }
+
 @media screen and (max-width: 426px) {
   .pensamento-p {
     width: 100%;
